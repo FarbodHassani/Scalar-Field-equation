@@ -1,0 +1,2801 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    111464,       2793]
+NotebookOptionsPosition[    111170,       2778]
+NotebookOutlinePosition[    111522,       2794]
+CellTagsIndexPosition[    111479,       2791]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LL", "=", 
+   RowBox[{"sqrtg", "  ", 
+    RowBox[{"(", " ", 
+     RowBox[{
+      RowBox[{
+       FractionBox[
+        SuperscriptBox[
+         SubscriptBox["M", "Pl"], "2"], "2"], "f", "  ", 
+       StyleBox["Curvatureq",
+        FontColor->RGBColor[0, 0, 1]]}], 
+      StyleBox["  ",
+       FontColor->RGBColor[0, 0, 1]], 
+      StyleBox["-",
+       FontColor->RGBColor[0, 0, 1]], 
+      RowBox[{"c", " ", "g00Ctv"}], 
+      StyleBox[
+       RowBox[{" ", 
+        StyleBox[" ",
+         FontColor->RGBColor[0, 0, 1]]}]], 
+      StyleBox["-",
+       FontColor->RGBColor[0, 0, 1]], 
+      StyleBox[" ",
+       FontColor->RGBColor[0, 0, 1]], "\[CapitalLambda]", "+", " ", 
+      RowBox[{
+       FractionBox["m24", "2"], "  ", 
+       SuperscriptBox["\[Delta]g00Ctv", "2"]}], " ", "-", 
+      RowBox[{
+       FractionBox["m33", "2"], " ", "\[Delta]g00Ctv", " ", "\[Delta]KK"}]}], 
+     
+     StyleBox[")",
+      FontColor->RGBColor[0, 0, 1]]}]}]}], 
+  StyleBox[";",
+   FontColor->RGBColor[0, 0, 1]]}]], "Input",
+ CellChangeTimes->{{3.7246016406171303`*^9, 3.724601688516768*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"2", " ", 
+    RowBox[{"a", "[", "t", "]"}]}]], 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"2", " ", 
+     SuperscriptBox[
+      RowBox[{"a", "[", "t", "]"}], "4"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["c", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        RowBox[{"\[CapitalPsi]", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["c", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "+", 
+       RowBox[{"6", " ", 
+        RowBox[{"m33", "[", "t", "]"}], " ", 
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["H", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "-", 
+       RowBox[{"3", " ", 
+        SubsuperscriptBox["M", "Pl", "2"], " ", 
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["f", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["H", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "-", 
+       RowBox[{"9", " ", 
+        SubsuperscriptBox["M", "Pl", "2"], " ", 
+        RowBox[{"\[CapitalPsi]", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["f", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["H", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "+", 
+       RowBox[{"4", " ", 
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["m24", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        RowBox[{"pi", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["H", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["m33", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "-", 
+       RowBox[{
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalLambda]", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        RowBox[{"\[CapitalPsi]", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalLambda]", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "-", 
+       RowBox[{
+        RowBox[{"pi", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["c", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        RowBox[{"pi", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        SubsuperscriptBox["M", "Pl", "2"], " ", 
+        RowBox[{
+         SuperscriptBox["H", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["f", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        SuperscriptBox[
+         RowBox[{"H", "[", "t", "]"}], "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"3", " ", 
+           RowBox[{"m33", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"\[CapitalPhi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["f", "\[Prime]",
+                MultilineFunction->None], "[", "t", "]"}]}], "+", 
+             RowBox[{"3", " ", 
+              RowBox[{"\[CapitalPsi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["f", "\[Prime]",
+                MultilineFunction->None], "[", "t", "]"}]}], "-", 
+             RowBox[{
+              RowBox[{"pi", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["f", "\[Prime]\[Prime]",
+                MultilineFunction->None], "[", "t", "]"}]}]}], ")"}]}]}], 
+         ")"}]}], "+", 
+       RowBox[{"3", " ", 
+        RowBox[{"m33", "[", "t", "]"}], " ", 
+        RowBox[{"pi", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["H", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "-", 
+       RowBox[{
+        RowBox[{"pi", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalLambda]", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{
+         SuperscriptBox["c", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["pi", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+       RowBox[{"4", " ", 
+        RowBox[{
+         SuperscriptBox["m24", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["pi", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+       RowBox[{"4", " ", 
+        RowBox[{"m24", "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalPhi]", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        RowBox[{
+         SuperscriptBox["m33", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalPsi]", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        RowBox[{"H", "[", "t", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "2"}], " ", 
+              RowBox[{
+               SuperscriptBox["c", "\[Prime]",
+                MultilineFunction->None], "[", "t", "]"}]}], "+", 
+             RowBox[{"3", " ", 
+              RowBox[{"m33", "[", "t", "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["H", "\[Prime]",
+                MultilineFunction->None], "[", "t", "]"}]}]}], ")"}]}], "+", 
+          RowBox[{
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}]}], "+", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"\[CapitalPhi]", "[", 
+              RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "-", 
+             RowBox[{
+              SuperscriptBox["pi", 
+               TagBox[
+                RowBox[{"(", 
+                 RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                Derivative],
+               MultilineFunction->None], "[", 
+              RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], ")"}]}], 
+          "+", 
+          RowBox[{
+           RowBox[{"m33", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"3", " ", 
+           RowBox[{"m33", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"4", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}]}], ")"}]}], 
+       "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"c", "[", "t", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"3", " ", 
+           RowBox[{"H", "[", "t", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"\[CapitalPhi]", "[", 
+              RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+             RowBox[{"3", " ", 
+              RowBox[{"\[CapitalPsi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              SuperscriptBox["pi", 
+               TagBox[
+                RowBox[{"(", 
+                 RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                Derivative],
+               MultilineFunction->None], "[", 
+              RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], ")"}]}], 
+          "+", 
+          RowBox[{
+           SuperscriptBox["\[CapitalPhi]", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+          RowBox[{"3", " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SuperscriptBox["pi", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"0", ",", "0", ",", "0", ",", "2"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], ")"}]}], "-", 
+       RowBox[{"4", " ", 
+        RowBox[{"m24", "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["pi", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "0", ",", "0", ",", "2"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        RowBox[{"m33", "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalPsi]", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "0", ",", "0", ",", "2"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+       RowBox[{"3", " ", 
+        SubsuperscriptBox["M", "Pl", "2"], " ", 
+        RowBox[{
+         SuperscriptBox["f", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[CapitalPsi]", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "0", ",", "0", ",", "2"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}]}], ")"}]}], "+", 
+    RowBox[{"4", " ", 
+     RowBox[{"m33", "[", "t", "]"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["pi", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "1", ",", "1", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["pi", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"1", ",", "0", ",", "1", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["pi", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"1", ",", "1", ",", "0", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "-", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["pi", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["pi", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["pi", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["pi", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+          RowBox[{
+           SuperscriptBox["pi", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], ")"}]}]}], 
+      ")"}]}], "-", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"a", "[", "t", "]"}], "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"H", "[", "t", "]"}], "2"], " ", 
+        RowBox[{"m33", "[", "t", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], 
+         ")"}]}], "+", 
+       RowBox[{
+        RowBox[{"H", "[", "t", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "4"}], " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], 
+            ")"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"m33", "[", "t", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalPhi]", 
+                   TagBox[
+                    RowBox[{"(", 
+                    RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                    Derivative],
+                   MultilineFunction->None], "[", 
+                  RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalPsi]", 
+                  TagBox[
+                   RowBox[{"(", 
+                    RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                   Derivative],
+                  MultilineFunction->None], "[", 
+                 RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+                RowBox[{"2", " ", 
+                 RowBox[{
+                  SuperscriptBox["pi", 
+                   TagBox[
+                    RowBox[{"(", 
+                    RowBox[{"0", ",", "0", ",", "1", ",", "1"}], ")"}],
+                    Derivative],
+                   MultilineFunction->None], "[", 
+                  RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}]}], 
+               ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                RowBox[{"3", " ", 
+                 RowBox[{"\[CapitalPhi]", "[", 
+                  RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+                RowBox[{"\[CapitalPsi]", "[", 
+                 RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], ")"}], 
+              " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{"2", " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{"2", " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              SuperscriptBox["pi", 
+               TagBox[
+                RowBox[{"(", 
+                 RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                Derivative],
+               MultilineFunction->None], "[", 
+              RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+             RowBox[{"3", " ", 
+              RowBox[{"\[CapitalPhi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{"\[CapitalPsi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{"2", " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{"2", " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              SuperscriptBox["pi", 
+               TagBox[
+                RowBox[{"(", 
+                 RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                Derivative],
+               MultilineFunction->None], "[", 
+              RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+             RowBox[{"3", " ", 
+              RowBox[{"\[CapitalPhi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{"\[CapitalPsi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}]}], 
+            ")"}]}], "+", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "-", 
+             
+             RowBox[{"2", " ", 
+              RowBox[{"pi", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 SuperscriptBox["pi", 
+                  TagBox[
+                   RowBox[{"(", 
+                    RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                   Derivative],
+                  MultilineFunction->None], "[", 
+                 RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+                RowBox[{
+                 SuperscriptBox["pi", 
+                  TagBox[
+                   RowBox[{"(", 
+                    RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                   Derivative],
+                  MultilineFunction->None], "[", 
+                 RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+                RowBox[{
+                 SuperscriptBox["pi", 
+                  TagBox[
+                   RowBox[{"(", 
+                    RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                   Derivative],
+                  MultilineFunction->None], "[", 
+                 RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], 
+               ")"}]}]}], ")"}]}]}], ")"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["m24", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["pi", 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], "+", 
+          
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["\[CapitalPhi]", 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], "-", 
+          
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"3", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["\[CapitalPsi]", 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], "+", 
+          
+          RowBox[{"8", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "1", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["m24", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["pi", 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], "+", 
+          
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["\[CapitalPhi]", 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], "-", 
+          
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"3", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["\[CapitalPsi]", 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], "+", 
+          
+          RowBox[{"8", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "1", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["m24", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["pi", 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], "+", 
+          
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["\[CapitalPhi]", 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], "-", 
+          
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"3", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["\[CapitalPsi]", 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}], "+", 
+          
+          RowBox[{"8", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"c", "[", "t", "]"}], " ", 
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"4", " ", 
+           RowBox[{"m24", "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["pi", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["c", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             RowBox[{"2", " ", 
+              RowBox[{"pi", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 SuperscriptBox["pi", 
+                  TagBox[
+                   RowBox[{"(", 
+                    RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                   Derivative],
+                  MultilineFunction->None], "[", 
+                 RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+                RowBox[{
+                 SuperscriptBox["pi", 
+                  TagBox[
+                   RowBox[{"(", 
+                    RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                   Derivative],
+                  MultilineFunction->None], "[", 
+                 RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+                RowBox[{
+                 SuperscriptBox["pi", 
+                  TagBox[
+                   RowBox[{"(", 
+                    RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                   Derivative],
+                  MultilineFunction->None], "[", 
+                 RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], 
+               ")"}]}]}], ")"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["m33", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPhi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"m33", "[", "t", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             RowBox[{"4", " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "1", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{"4", " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "2"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              SuperscriptBox["\[CapitalPhi]", 
+               TagBox[
+                RowBox[{"(", 
+                 RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                Derivative],
+               MultilineFunction->None], "[", 
+              RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+             RowBox[{
+              RowBox[{"\[CapitalPsi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             RowBox[{"4", " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "1", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{"4", " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "2"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              SuperscriptBox["\[CapitalPhi]", 
+               TagBox[
+                RowBox[{"(", 
+                 RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                Derivative],
+               MultilineFunction->None], "[", 
+              RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+             RowBox[{
+              RowBox[{"\[CapitalPsi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], "+", 
+             
+             RowBox[{"4", " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{"4", " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPsi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "2"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["H", "\[Prime]",
+                MultilineFunction->None], "[", "t", "]"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 SuperscriptBox[
+                  RowBox[{
+                   SuperscriptBox["pi", 
+                    TagBox[
+                    RowBox[{"(", 
+                    RowBox[{"0", ",", "0", ",", "1", ",", "0"}], ")"}],
+                    Derivative],
+                    MultilineFunction->None], "[", 
+                   RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"]}],
+                 "+", 
+                RowBox[{"2", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SuperscriptBox[
+                    RowBox[{
+                    SuperscriptBox["pi", 
+                    TagBox[
+                    RowBox[{"(", 
+                    RowBox[{"0", ",", "1", ",", "0", ",", "0"}], ")"}],
+                    Derivative],
+                    MultilineFunction->None], "[", 
+                    RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "2"], 
+                   "+", 
+                   SuperscriptBox[
+                    RowBox[{
+                    SuperscriptBox["pi", 
+                    TagBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", ",", "0", ",", "0", ",", "0"}], ")"}],
+                    Derivative],
+                    MultilineFunction->None], "[", 
+                    RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], 
+                    "2"]}], ")"}]}], "+", 
+                RowBox[{"3", " ", 
+                 RowBox[{"pi", "[", 
+                  RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    SuperscriptBox["pi", 
+                    TagBox[
+                    RowBox[{"(", 
+                    RowBox[{"0", ",", "0", ",", "2", ",", "0"}], ")"}],
+                    Derivative],
+                    MultilineFunction->None], "[", 
+                    RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+                   RowBox[{
+                    SuperscriptBox["pi", 
+                    TagBox[
+                    RowBox[{"(", 
+                    RowBox[{"0", ",", "2", ",", "0", ",", "0"}], ")"}],
+                    Derivative],
+                    MultilineFunction->None], "[", 
+                    RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+                   RowBox[{
+                    SuperscriptBox["pi", 
+                    TagBox[
+                    RowBox[{"(", 
+                    RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                    Derivative],
+                    MultilineFunction->None], "[", 
+                    RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], 
+                  ")"}]}]}], ")"}]}], "-", 
+             RowBox[{
+              SuperscriptBox["\[CapitalPhi]", 
+               TagBox[
+                RowBox[{"(", 
+                 RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                Derivative],
+               MultilineFunction->None], "[", 
+              RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "+", 
+             RowBox[{
+              RowBox[{"\[CapitalPsi]", "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "-", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["pi", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[CapitalPhi]", 
+                TagBox[
+                 RowBox[{"(", 
+                  RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+                 Derivative],
+                MultilineFunction->None], "[", 
+               RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}]}], 
+            ")"}]}], "+", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPhi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{"\[CapitalPsi]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"pi", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], " ", 
+           SubsuperscriptBox["M", "Pl", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["f", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[CapitalPsi]", 
+             TagBox[
+              RowBox[{"(", 
+               RowBox[{"2", ",", "0", ",", "0", ",", "0"}], ")"}],
+              Derivative],
+             MultilineFunction->None], "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}]}], ")"}]}]}],
+       ")"}]}]}], ")"}]}]], "Input",
+ CellChangeTimes->{3.724601556779232*^9}]
+},
+WindowSize->{808, 755},
+WindowMargins->{{3, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1111, 35, 55, "Input"],
+Cell[1672, 57, 109494, 2719, 2907, "Input"]
+}
+]
+*)
+
