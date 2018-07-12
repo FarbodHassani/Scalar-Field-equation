@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    491356,      11260]
-NotebookOptionsPosition[    489738,      11219]
-NotebookOutlinePosition[    490603,      11246]
-CellTagsIndexPosition[    490560,      11243]
+NotebookDataLength[    489723,      11206]
+NotebookOptionsPosition[    488104,      11165]
+NotebookOutlinePosition[    488971,      11192]
+CellTagsIndexPosition[    488928,      11189]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,9 +21,9 @@ for \[CapitalPhi] and \[CapitalPsi]\n- The result is not normalized to ",
  Cell[BoxData[
   FormBox[
    SqrtBox[
-    RowBox[{"-", "g"}]], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
-  "d8d5b964-a08f-47ba-a100-c71b02f4cd88"]
+    RowBox[{"-", "g"}]], TraditionalForm]],ExpressionUUID->
+  "d8d5b964-a08f-47ba-a100-c71b02f4cd88"],
+ "\n-Time is physical time."
 }], "Text",
  CellChangeTimes->{{3.712045154470808*^9, 3.712045155492573*^9}, {
    3.712045263458941*^9, 3.7120452912362013`*^9}, {3.712045347091524*^9, 
@@ -37,8 +37,8 @@ for \[CapitalPhi] and \[CapitalPsi]\n- The result is not normalized to ",
    3.727417772799361*^9}, {3.727418212179328*^9, 3.727418267768355*^9}, {
    3.7274185009135027`*^9, 3.72741851243318*^9}, {3.7275209445657473`*^9, 
    3.7275209447500257`*^9}, {3.727523744251748*^9, 3.727523839330429*^9}, {
-   3.727523982230864*^9, 
-   3.7275239993160057`*^9}},ExpressionUUID->"ad02bba7-112a-4010-b379-\
+   3.727523982230864*^9, 3.7275239993160057`*^9}, {3.740375415347159*^9, 
+   3.74037542100345*^9}},ExpressionUUID->"ad02bba7-112a-4010-b379-\
 ebd25ae13deb"],
 
 Cell[CellGroupData[{
@@ -513,25 +513,20 @@ Cell[BoxData[
    StyleBox["\[IndentingNewLine]",
     FontSize->9], 
    StyleBox[
-    RowBox[{
-     StyleBox["(*", "Subsubsection"], 
-     RowBox[{
-      StyleBox["Inverse", "Subsubsection"], 
-      StyleBox[" ", "Subsubsection"], 
-      StyleBox["h", "Subsubsection"], 
-      StyleBox[" ", "Subsubsection"], 
-      StyleBox["definition", "Subsubsection"]}], 
-     StyleBox["*)", "Subsubsection"]}],
-    FontSize->9], "\n", 
+    StyleBox[
+     RowBox[{"(*", 
+      RowBox[{"Inverse", " ", "h", " ", "definition"}], "*)"}], 
+     "Subsubsection"],
+    FontSize->9], 
+   StyleBox["\[IndentingNewLine]",
+    FontSize->9], 
    StyleBox[
     RowBox[{"(*", 
      RowBox[{
       RowBox[{"hijsub", "[", 
        RowBox[{"t", ",", "x1", ",", "x2", ",", "x3"}], "]"}], " ", "//", 
       "MatrixForm"}], "*)"}],
-    FontSize->9], 
-   StyleBox["\[IndentingNewLine]",
-    FontSize->9], 
+    FontSize->9], "\n", 
    StyleBox[" ",
     FontSize->9], 
    StyleBox[
@@ -660,23 +655,12 @@ Cell[BoxData[
    StyleBox["\[IndentingNewLine]",
     FontSize->9], 
    StyleBox[
-    RowBox[{
-     StyleBox["(*", "Subsubsection"], 
-     RowBox[{
-      StyleBox["Gemetrical", "Subsubsection"], 
-      StyleBox[" ", "Subsubsection"], 
-      RowBox[{
-       StyleBox["definitions", "Subsubsection"], 
-       StyleBox[":", "Subsubsection"], 
-       StyleBox[" ", "Subsubsection"], 
-       RowBox[{
-        StyleBox["Affine", "Subsubsection"], 
-        StyleBox[" ", "Subsubsection"], 
-        StyleBox["parameter", "Subsubsection"], 
-        StyleBox[" ", "Subsubsection"], 
-        StyleBox["3", "Subsubsection"], 
-        StyleBox["D", "Subsubsection"]}]}]}], 
-     StyleBox["*)", "Subsubsection"]}],
+    StyleBox[
+     RowBox[{"(*", 
+      RowBox[{"Gemetrical", " ", 
+       RowBox[{"definitions", ":", " ", 
+        RowBox[{"Affine", " ", "parameter", " ", "3", "D"}]}]}], "*)"}], 
+     "Subsubsection"],
     FontSize->9], "\n", 
    StyleBox[
     RowBox[{
@@ -743,16 +727,16 @@ Cell[BoxData[
          RowBox[{"k", ",", "1", ",", "3"}], "}"}]}], "]"}]}], " ", ";"}],
     FontSize->9], 
    StyleBox["\[IndentingNewLine]",
-    FontSize->9], "\n", 
+    FontSize->9], 
+   StyleBox["\[IndentingNewLine]",
+    FontSize->9], 
    StyleBox[
     RowBox[{"(*", 
      RowBox[{
       RowBox[{"g\[Mu]\[Nu]", "[", 
        RowBox[{"t", ",", "x"}], "]"}], " ", "definition"}], "*)"}], 
     "Subsubsection"], 
-   StyleBox[" ", "Subsubsection"], 
-   StyleBox["\[IndentingNewLine]",
-    FontSize->9], 
+   StyleBox[" ", "Subsubsection"], "\n", 
    StyleBox[
     RowBox[{
      RowBox[{
@@ -1081,30 +1065,13 @@ Cell[BoxData[
    StyleBox["\[IndentingNewLine]",
     FontSize->9], 
    StyleBox[
-    RowBox[{
-     StyleBox["(*", "Subsubsection"], 
-     RowBox[{
-      StyleBox["Geometry", "Subsubsection"], 
-      StyleBox[" ", "Subsubsection"], 
-      RowBox[{
-       StyleBox["definitions", "Subsubsection"], 
-       StyleBox[":", "Subsubsection"], 
-       StyleBox[" ", "Subsubsection"], 
-       RowBox[{
-        StyleBox["Riemann", "Subsubsection"], 
-        StyleBox[" ", "Subsubsection"], 
-        StyleBox["and", "Subsubsection"], 
-        StyleBox[" ", "Subsubsection"], 
-        StyleBox["Ricci", "Subsubsection"], 
-        StyleBox[" ", "Subsubsection"], 
-        StyleBox["tensor", "Subsubsection"], 
-        StyleBox[" ", "Subsubsection"], 
-        StyleBox["and", "Subsubsection"], 
-        StyleBox[" ", "Subsubsection"], 
-        StyleBox["Ricci", "Subsubsection"], 
-        StyleBox[" ", "Subsubsection"], 
-        StyleBox["scalar", "Subsubsection"]}]}]}], 
-     StyleBox["*)", "Subsubsection"]}],
+    StyleBox[
+     RowBox[{"(*", 
+      RowBox[{"Geometry", " ", 
+       RowBox[{"definitions", ":", " ", 
+        RowBox[{
+        "Riemann", " ", "and", " ", "Ricci", " ", "tensor", " ", "and", " ", 
+         "Ricci", " ", "scalar"}]}]}], "*)"}], "Subsubsection"],
     FontSize->9], "\n", 
    StyleBox[
     RowBox[{
@@ -1202,19 +1169,11 @@ Cell[BoxData[
     FontSize->9], 
    StyleBox[
     RowBox[{"(*", 
-     RowBox[{
-      StyleBox[
-       RowBox[{"Stuckelberg", " ", "trick"}], "Subsubsection",
-       FontSize->12], 
-      StyleBox["-", "Subsubsection",
-       FontSize->12], 
+     StyleBox[
       RowBox[{
-       StyleBox["Second", "Subsubsection",
-        FontSize->12], 
-       StyleBox[" ", "Subsubsection",
-        FontSize->12], 
-       StyleBox["order", "Subsubsection",
-        FontSize->12]}]}], "*)"}], "Subsubsection",
+       RowBox[{"Stuckelberg", " ", "trick"}], "-", 
+       RowBox[{"Second", " ", "order"}]}], "Subsubsection",
+      FontSize->12], "*)"}], "Subsubsection",
     FontSize->14], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
@@ -2734,8 +2693,8 @@ Cell[BoxData[{
         RowBox[{"\[Epsilon]", ",", "0", ",", "3"}], "}"}]}], "]"}], "]"}]}], 
    ";"}],
   FontSize->9], "\[IndentingNewLine]", 
- RowBox[{
-  StyleBox[
+ StyleBox[
+  RowBox[{
    RowBox[{
     RowBox[{"SEFTStuck", "=", 
      RowBox[{"Normal", "[", 
@@ -2775,11 +2734,7 @@ Cell[BoxData[{
               "1"}], ")"}]}]}], ")"}]}], ",", 
         RowBox[{"{", 
          RowBox[{"\[Epsilon]", ",", "0", ",", "3"}], "}"}]}], "]"}], "]"}]}], 
-    ";"}],
-   FontSize->9], 
-  StyleBox["\[IndentingNewLine]",
-   FontSize->9], 
-  StyleBox[
+    ";"}], "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{"inverseSqtMetric", "=", 
@@ -2794,15 +2749,15 @@ Cell[BoxData[{
          ",", 
         RowBox[{"{", 
          RowBox[{"\[Epsilon]", ",", "0", ",", "3"}], "}"}]}], "]"}]}], ";"}], 
-    "*)"}],
-   FontSize->9]}], "\[IndentingNewLine]", 
+    "*)"}]}],
+  FontSize->9], "\[IndentingNewLine]", 
  StyleBox[
   RowBox[{"SetOptions", "[", 
    RowBox[{"Simplify", ",", 
     RowBox[{"TimeConstraint", "\[Rule]", "1000000"}]}], "]"}],
   FontSize->9], "\[IndentingNewLine]", 
- RowBox[{
-  StyleBox[
+ StyleBox[
+  RowBox[{
    RowBox[{
     RowBox[{
      RowBox[{"Sol\[Pi]\[Pi]1", "=", "  ", 
@@ -2812,22 +2767,15 @@ Cell[BoxData[{
          RowBox[{"t", ",", "x1", ",", "x2", ",", "x3"}], "]"}], ",", 
         RowBox[{"{", 
          RowBox[{"t", ",", "x1", ",", "x2", ",", "x3"}], "}"}]}], "]"}]}], 
-     " ", ";"}], " ", "//", " ", "Timing"}],
-   FontSize->9], 
-  StyleBox["\n",
-   FontSize->9], 
-  StyleBox[
-   RowBox[{"(*", " ", 
-    RowBox[{"Newtonian", " ", "gauge"}], " ", "*)"}], "Subsubsection",
-   FontSize->9], 
-  StyleBox["\[IndentingNewLine]",
-   FontSize->9], 
-  StyleBox[
+     " ", ";"}], " ", "//", " ", "Timing"}], "\[IndentingNewLine]", 
+   StyleBox[
+    RowBox[{"(*", " ", 
+     RowBox[{"Newtonian", " ", "gauge"}], " ", "*)"}], "Subsubsection"], "\n", 
    RowBox[{"(*", 
     RowBox[{
     "EFT", " ", "papers", " ", "notation", " ", "for", " ", "\[CapitalPhi]", 
-     " ", "and", " ", "\[CapitalPsi]"}], "*)"}],
-   FontSize->9]}], "\[IndentingNewLine]", 
+     " ", "and", " ", "\[CapitalPsi]"}], "*)"}]}],
+  FontSize->9], "\[IndentingNewLine]", 
  StyleBox[
   RowBox[{
    RowBox[{"Nbar", "=", 
@@ -2875,9 +2823,7 @@ Cell[BoxData[{
        RowBox[{"{", 
         RowBox[{"t", ",", "x1", ",", "x2", ",", "x3"}], "}"}], ",", "0"}], 
       " ", "]"}]}], ";"}],
-   FontSize->9], 
-  StyleBox["\n",
-   FontSize->9], 
+   FontSize->9], "\n", 
   StyleBox[
    RowBox[{
     StyleBox["(*",
@@ -11219,7 +11165,7 @@ $CellContext`x1, $CellContext`x2, $CellContext`x3])))))],
 },
 WindowToolbars->"EditBar",
 WindowSize->{1123, 1148},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowMargins->{{101, Automatic}, {Automatic, 0}},
 PrintingPageRange->{Automatic, Automatic},
 PrintingOptions->{"Magnification"->1,
 "PaperOrientation"->"Portrait",
@@ -11245,16 +11191,16 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[400, 13, 1658, 28, 295, "Text",ExpressionUUID->"ad02bba7-112a-4010-b379-ebd25ae13deb"],
+Cell[400, 13, 1700, 28, 329, "Text",ExpressionUUID->"ad02bba7-112a-4010-b379-ebd25ae13deb"],
 Cell[CellGroupData[{
-Cell[2083, 45, 100606, 2672, 5814, "Input",ExpressionUUID->"2a80000a-d642-4eef-8cac-8301b44ad6c4",
+Cell[2125, 45, 99119, 2631, 5814, "Input",ExpressionUUID->"2a80000a-d642-4eef-8cac-8301b44ad6c4",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[102692, 2719, 21537, 408, 708, "Input",ExpressionUUID->"87e170c3-0600-4a27-9be4-f374bb720a5e",
+Cell[101247, 2678, 21348, 395, 712, "Input",ExpressionUUID->"87e170c3-0600-4a27-9be4-f374bb720a5e",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
 }, Open  ]],
-Cell[124244, 3130, 535, 12, 95, "Output",ExpressionUUID->"27fa93e7-9df0-4d91-9560-519f68134ce3"],
-Cell[124782, 3144, 191, 5, 63, "Output",ExpressionUUID->"8e779ab5-d481-455c-9586-8bfc8799ec01"],
-Cell[124976, 3151, 364758, 8066, 8738, "Print",ExpressionUUID->"5ea2bf1e-f4d1-4509-a9fb-9c150d557d59"]
+Cell[122610, 3076, 535, 12, 95, "Output",ExpressionUUID->"27fa93e7-9df0-4d91-9560-519f68134ce3"],
+Cell[123148, 3090, 191, 5, 63, "Output",ExpressionUUID->"8e779ab5-d481-455c-9586-8bfc8799ec01"],
+Cell[123342, 3097, 364758, 8066, 8683, "Print",ExpressionUUID->"5ea2bf1e-f4d1-4509-a9fb-9c150d557d59"]
 }
 ]
 *)

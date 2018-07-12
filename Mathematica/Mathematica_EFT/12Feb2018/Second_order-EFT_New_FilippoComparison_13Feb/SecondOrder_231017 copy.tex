@@ -1,0 +1,524 @@
+\documentclass[a4paper,12pt]{article}
+%% My standard included packages
+%\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+%             % images in pdf, png or jpg format)
+%\usepackage{jcappub} % for details on the use of the package, please
+%                     % see the JCAP-author-manual
+%\usepackage[T1]{fontenc} % if needed
+
+\usepackage{setspace}           % Allows easy changes to line spacing 
+\usepackage{graphicx}           % Allows including of graphics files
+\usepackage{amsmath}            % Additional math capabilities
+\usepackage{marginnote}         % Used with todonotes package
+\usepackage{datetime}           % Allows formatting of date and time
+\newcommand {\be}{\begin{equation}}
+\newcommand {\ee}{\end{equation}}
+
+\usepackage{enumitem} 
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{graphicx}% Use pdf, png, jpg, or epså¤ with pdflatex; use eps in DVI mode
+\usepackage{caption}
+\usepackage{subcaption}
+          % List formatting commands
+\setlist{noitemsep}             % Remove space between list items 
+%\usepackage{subfigure}          % Create numbered and captioned subfigures
+\usepackage{rotating}           % Create landscape tables and figures
+\usepackage[dvipsnames]{xcolor} % Refer to colors by name
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=Orange,citecolor=RedViolet]{hyperref}           % URLS and hyperlinks
+%\usepackage{hyperref}           % URLS and hyperlinks
+\usepackage{float}              % Activate [H] option to place figure HERE
+\usepackage[numbers]{natbib}
+\usepackage{versionPO}          % Include text conditionally
+\usepackage{caption}
+%\usepackage[utf8]{inputenc}
+%\usepackage[nottoc]{tocbibind}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+% These next lines allow including or excluding different versions of text
+% using versionPO.sty
+\includeversion{notes}		% Include notes?
+%\excludeversion{notes}
+\excludeversion{comment}
+\includeversion{links}          % Turn hyperlinks on?
+\excludeversion{submit}		% Format for conference submission?
+\includeversion{toc}		% Include table of contents?
+%\graphicspath{{./Results1-Perihelionadvance}}
+
+% Turn off hyperlinking if links is excluded
+\iflinks{}{\hypersetup{draft=true}}
+
+% Notes options
+\ifnotes{%
+\usepackage[margin=1in,paperwidth=10in,right=2.5in]{geometry}%
+\usepackage[textwidth=1.4in,shadow,colorinlistoftodos]{todonotes}%
+}{%
+\usepackage[margin=1in]{geometry}%
+\usepackage[disable]{todonotes}%
+}
+
+% Allow todonotes inside footnotes without blowing up LaTeX
+% Next command works but now notes can overlap. Instead, we'll define 
+% a special footnote note command that performs this redefinition.
+%\renewcommand{\marginpar}{\marginnote}%
+
+% Save original definition of \marginpar
+\let\oldmarginpar\marginpar
+% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
+\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes
+% Packages included specifically for this document.
+\usepackage{texintro}           % Document-specific definitions
+\usepackage{tocvsec2}           % More flexible formatting of table of contents
+\usepackage{bibentry}           % Print full citation in text
+\nobibliography*                                % Allow use of \bibentry command
+\usepackage{tikz}             % Already included by todonotes
+\usetikzlibrary{matrix}
+\usepackage[retainorgcmds]{IEEEtrantools}  % Equation formatting. Option needed to
+                                           % allow enumitem to work.
+
+% Workaround for todonotes problem with natbib (To Do list title comes out wrong)
+% If you're including tocvsec2, do so before this command.
+\makeatletter\let\chapter\@undefined\makeatother % Undefine \chapter for todonotes.
+
+% Number paragraphs and subparagraphs and include them in TOC
+\setcounter{tocdepth}{2}
+
+\usepackage[affil-it]{authblk} 
+\usepackage{etoolbox}
+%\usepackage{lmodern}
+%\renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
+%\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
+%\renewcommand\Authfont{\fontsize{12}{15}\selectfont}
+%\renewcommand\Affilfont{\fontsize{9}{11}\itshape}
+\definecolor{astral}{RGB}{46,116,181}
+%\subsectionfont{\color{astral}}
+%\sectionfont{\color{astral}}
+%\usdate{17 May}                         % Use usual LaTeX date layout
+
+%\title{\color{BlueViolet}\Huge{On the accuracy of approximated geodesic equations and different potentials with different numerical methods } }
+\title{\color{BlueViolet}\Huge{Second order Field equations}}
+%\vskip 2em
+\author{Farbod Hassani}
+%\thanks{Email:\href{mailto:farbod.hassani@unige.ch}{{farbod.hassani@unige.ch}}}  \thanks{Homepage: \href{http://www.farbod-hassani.com}{farbod-hassani.com}}}
+%\affil{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
+%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
+
+%{farbod-hassani.com}} }
+%\newcommand*{\TitleFont}{%     \usefont{\encodingdefault}{\rmdefault}{b}'%     \fontsize{18}{16}%    \selectfont}
+%\title{\TitleFont Halo finder}
+%\author[1]{{Farbod Hassani} \thanks{ \url{farbod.hassani@gmail.com}
+%}
+%\thanks{farbod-hassani.com}}
+%\author[2]{Author E\thanks{E.E@university.edu}}
+%\affil[1]{D\'epartement de Physique Th\'eorique and Center for Astroparticle Physics, Universit\'e de Gen\'eve,
+%24 quai Ansermet, CH-1211 Gen\'eve 4, Switzerland}
+%\emailAdd{farbod.hassani@gmail.com}
+%\affil[2]{Department of Mechanical Engineering, \LaTeX\ University}
+      %\begin{abstract}
+%This is abstract text: This simple document shows very basic features of \LaTeX{}.
+%\lstset { %
+%    language=C++,
+%    %backgroundcolor=\color{black!5}, % set backgroundcolor
+%    basicstyle=\footnotesize,% basic font setting
+%}
+\begin{document}
+  \maketitle
+  \flushbottom
+  
+  \section{Metric and geometric quantities}
+  We take the metric in ADM form as below,
+  \be
+  ds^2= -N (t,\vec{x}) ^2 d t^2+ h_{ij } (t,\vec{x}) \Big( dx^i+N^i (t,\vec{x}) dt   \Big) \Big( dx^j+N^j (t,\vec{x}) dt   \Big)
+  \ee
+  where 
+  \be
+  N(t,\vec{x})= \bar{N} (t) e^{\epsilon \delta N (t,\vec{x})}
+  \ee
+  \be
+  N^i=\epsilon \sigma^{0i} (t,\vec{x})
+  \ee
+  \be
+    h_{ij}=a^2 \Big( e^{2 \zeta (t,\vec{x}) \epsilon} \delta_{ij} + \epsilon \sigma_{ij} (t,\vec{x})   \Big)
+  \ee
+  $\epsilon$ shows the order of terms in the scheme.\\
+  For the first order equations we can define $\sigma_{ij}=(\partial_i \partial_j- \frac{\nabla^2}{3} \delta_{ij}) B(t,\vec{x}) \epsilon$ and $N^i=\delta ^{ij} \partial_j \psi (t,\vec{x}) \epsilon$  since we can separate the scalar, vector and tensor equations. \\
+  On the other hand in second order equations we do observe the mixing of the scalar, vector and tensor equations according to $ T^{\mu \nu} \frac{\delta g_{\mu \nu}}{\delta (scalars)}$, which cannot be written as a derivative of a scalar equation and suggest other definition of the metric.  The calculation of $T^{\mu \nu} \frac{\delta g_{\mu \nu}}{\delta (scalars)}$ is presented in the appendix (?). \\
+   \\
+  { \color{red} {  For the second order equations we should think of writing the metric in general way, for example $\sigma^{ij}$ is a general function but How many? degrees of freedom in equations (scalar) or vector ...}}
+\section{Definitions}
+ The inverse of the metric is defined by the inverse of the  matrix.
+\be
+g^{. .}= ( g_{. .} )^{-1}
+\ee
+\be
+N_i=h_{ij} N^j
+\ee
+Christoffel symbols:
+\be
+\Gamma_{\zeta \rho}^{\mu}= \frac{g^{\mu \xi }}{2} \left(  g_{\xi \zeta ,\rho }+ g_{\xi \rho ,\zeta } - g_{\rho \zeta ,\xi }   \right )
+\ee
+\be
+K_{ij}=\frac{1}{2 N (t,\vec{x})} \left [  \dot{h}_{ij} - \nabla_{i} N_{j} - \nabla_{j} N_{i}  \right ]= \frac{1}{2 N (t,\vec{x})} \left [  \dot{h}_{ij} - \partial_{i} N_{j} - \partial_{j} N_{i} -2  \Gamma_{i j}^{l} N_l  \right ] 
+\ee
+\be
+\delta K= K_i^i(t,\vec{x}) -\bar {K}_i^i (t)
+\ee
+Full metric,
+\be
+g_{00}= -N^2(t,\vec{x})+ h_{ij} N^i N^j \,,\, g_{ij}=h_{ij} \, , \, g_{0i}=g_{i0}=h_{ij}N^j
+\ee
+Riemann tensor
+\be
+R^{\rho}_{\sigma \mu \zeta}= \partial_{\mu} \Gamma_{\zeta \sigma}^{\rho}- \partial_{\zeta} \Gamma_{\mu \sigma}^{\rho} + \Gamma_{\mu \lambda}^{\rho} \Gamma_{\zeta \sigma}^{\lambda} -  \Gamma_{\zeta \lambda}^{\rho} \Gamma_{\mu \sigma}^{\lambda}
+\ee
+Ricci tensor;
+\be
+R_{\mu \rho}=R ^{\eta}_{\mu  \eta  \rho}
+\ee
+Ricci scalar;
+\be
+R=g^{\mu \rho} R_{\mu \rho}
+\ee
+ 
+ \subsection{Stuckelberg trick}
+ { \color{red} {  Full calculation in the appendix?!}}
+\be
+f(t) \longrightarrow f(t) +  \dot{f} (t) \pi+ \frac{1}{2} \ddot{f }(t) \pi^2  + \frac{1}{6} \dddot{f }(t) \pi^3
+\ee
+\be
+\Lambda(t) \longrightarrow \Lambda(t) +  \dot{\Lambda} (t) \pi+ \frac{1}{2} \ddot{\Lambda}(t) \pi^2 + \frac{1}{6} \dddot{\Lambda }(t) \pi^3
+\ee
+\be
+M_2^4(t) \longrightarrow M_2^4(t) +  \dot{ M_2^4} (t) \pi+ \frac{1}{2}    \ddot{ M_2^4 }(t)  \pi^2 + \frac{1}{6} \dddot{M_2^4 }(t) \pi^3
+\ee
+\be
+m_3^3(t) \longrightarrow m_3^3(t) +  \dot{m_3^3} (t) \pi+ \frac{1}{2} \ddot{m_3^3}(t) \pi^2 + \frac{1}{6} \dddot{m_3^3 }(t) \pi^3
+\ee
+\be
+g^{00} \longrightarrow g^{00} + 2 g^{0 \mu} \partial_{\mu} \pi + g^{\rho \nu} \partial_{\rho} \partial_{\nu} \pi
+\ee
+\begin{align}
+\delta K  \longrightarrow &   \delta K -3 \left ( \dot{H} \pi +\frac{1}{2} \ddot{H} \pi^2 \right ) - (1-\dot{\pi}) N h^{ij} \partial_i \partial_j \pi +\frac{1}{2} \partial_i h^{ij} \partial_j \pi  \nonumber \\ &+\frac{H}{2 a^2} \delta ^{ij}\partial_i \pi \partial_j \pi + \frac{2}{a^2} \delta ^{ij} \partial_i  \pi  \partial_j    \dot{\pi} -\frac{2}{a^2} \delta ^{ij} \partial_i N \partial_j \pi
+\end{align}
+The EFT action;
+\be
+S=\sqrt{-g} \left [ \frac{M_*^2}{2} f(t) R -\Lambda (t) -c(t) g^{00} +\frac{M_2^4(t)}{2} \left (g^{00} + \frac{1}{\bar{N}^2} \right )    -  \frac{m_3^3(t)}{2} \delta K  \left (g^{00} + \frac{1}{\bar{N}^2} \right )    \right ]
+\ee
+
+
+
+  Then the scalar field equations obtained by varying the action with respect to the scalars   { \color{red} { for second order equations  we need to decide for $N^i$ and $\sigma^{ij}$ instead of naively varying with respect to $\psi$ and B }}
+    \be
+  \frac{1}{\sqrt{-g}} \frac{\delta S}{\delta \pi}=  ....
+  \ee
+    \be
+  \frac{1}{\sqrt{-g}} \frac{\delta S}{\delta \delta N}=  ....
+  \ee
+    \be
+  \frac{1}{\sqrt{-g}} \frac{\delta S}{\delta \zeta }=  ....
+  \ee
+  \be
+    \frac{1}{\sqrt{-g}} \frac{\delta S}{\delta \psi }=  ....
+ \ee
+    \be
+    \frac{1}{\sqrt{-g}} \frac{\delta S}{\delta B }=  ....
+ \ee
+ \\
+ \subsection{Gauge transformation}
+ Newtonian gauge:
+ {\color{red}{Appendix!}}
+ \be
+ \delta N \rightarrow \Phi \, , \, \zeta \rightarrow-\Psi \, , \,  \psi \rightarrow0,  \,  \,  B \rightarrow0
+ \ee
+ 
+ \section{Field equations}
+ By varying the action with respect to the scalars we get exactly the same first order equations of references ( {\color{red}{Ref!}}) and for the second order equations up to Gevolution's scheme we get,  
+\subsection{$\Phi$:}
+The second order field equations obtained from $\frac{1}{\sqrt{-g}} \frac{\delta S}{\delta \Phi}$, which contributes to lower order according to Gevolution's perturbative scheme, in Fourier space is: \\
+{\color{red}{We need to prove that there is no contribution from higher order equations!?!}}
+\\ we have coupling of the terms at second order which are chosen from the set $ \{ \Phi, \Psi, \pi  \; , \dot{\Phi},\dot{\Psi},\dot{\pi} \; , i \, \vec{k} \,  \Phi,i \vec{k}  \Psi,i \vec{k} \,    \pi    \; ,-k^2  \Phi,   -k^2  \Psi, -k^2  \pi \\,  \;  \ddot{\Phi},\ddot{\Psi},\ddot{\pi} \; , -i k^3  \Phi, -i k^3  \Psi, -i k^3  \pi ,   k^4  \Phi,  k^4  \Psi,  k^4  \pi, ...  \}  $. \\
+ According to the obtained expression there is no contribution from  $\{ \ddot{\Phi},\ddot{\Psi},\ddot{\pi}, -k_i k_j  \Phi ,-k_i k_j  \Psi,-k_i k_j  \pi \\, -k^2 \dot{\Phi},  -k^2 \dot{\Psi},-k^2 \dot{\pi},  -i k^3  \Phi , -i k^3  \Psi,   -i k^3  \pi ,  k^4  \Phi ,  k^4  \Psi,  k^4  \pi  ,... \}$.  Moreover for $ \{  i \, \vec{k} \,  \Phi,i \vec{k}  \Psi,i \vec{k} \,    \pi  \}$ we have contribution only when they couple to each other, like $-\vec{k}.\vec{k'} \Phi \Psi$. \\
+ So we must choose different two combinations of the terms from $ \{ \Phi, \Psi, \pi  \; , \dot{\Phi},\dot{\Psi},\dot{\pi} \; ,-k^2  \Phi,   -k^2  \Psi, -k^2  \pi  \}  $ plus six combinations from $ \{  i \, \vec{k} \,  \Phi,i \vec{k}  \Psi,i \vec{k} \,    \pi  \}$  .\\
+All the relevant second order terms are;
+\begin{align}
+\frac{1}{\sqrt{-g}} \frac{\delta S}{\delta \Phi} &=  \int \int d^3k d^3 k' e^{i(\vec{k}+\vec{k}') . \vec{x}}  \Bigg [ -\frac{k^2}{a^2} A^{(2)}_{\Phi \Phi} \tilde{\Phi}(\vec{k}) \tilde{\Phi} (\vec{k'})   -\frac{k^2}{a^2} A^{(2)}_{\Phi \Psi} \tilde{\Phi} \tilde{\Psi}  -\frac{k^2}{a^2} A^{(2)}_{\Phi \pi} \tilde{\Phi} \tilde{\pi} 
+  -\frac{k^2}{a^2} A^{(2)}_{\Psi \Phi} \tilde{\Psi}  \tilde{\Phi}  -\frac{k^2}{a^2} A^{(2)}_{\Psi \Psi} \tilde{\Psi}  \tilde{\Psi}   -\frac{k^2}{a^2} A^{(2)}_{\Psi \pi} \tilde{\Psi} \tilde{ \pi} 
+\nonumber  \\& 
+-\frac{k^2}{a^2} A^{(2)}_{\pi \Phi}  \tilde{\pi} \tilde{\Phi}  -\frac{k^2}{a^2} A^{(2)}_{\pi \Psi}\tilde{ \pi} \tilde{ \Psi}   -\frac{k^2}{a^2} A^{(2)}_{\pi \pi} \tilde{\pi}  \pi 
+ -\frac{k^2}{a^2} A^{(2)}_{\dot{\Phi} \Phi} {\dot{\tilde{\Phi}}} \tilde{\Phi}  -\frac{k^2}{a^2} A^{(2)}_{\dot{\Phi} \Psi} \dot{\tilde{\Phi}} \tilde{\Psi}   -\frac{k^2}{a^2} A^{(2)}_{\dot{\Phi} \pi} \dot{\tilde{\Phi}} \tilde{ \pi} 
+\nonumber   \\&
+ -\frac{k^2}{a^2} A^{(2)}_{\dot{\Psi} \Phi} \dot{\tilde{\Psi}} \tilde{\Phi}  -\frac{k^2}{a^2} A^{(2)}_{\dot{\Psi} \Psi} \dot{\tilde{\Psi}} \tilde{\Psi}   -\frac{k^2}{a^2} A^{(2)}_{\dot{\Psi} \pi} \dot{\tilde{\Psi}} \tilde{ \pi} 
+  -\frac{k^2}{a^2} A^{(2)}_{\dot{\pi} \Phi} \dot{\tilde{\pi}} \tilde{\Phi}  -\frac{k^2}{a^2} A^{(2)}_{\dot{\pi} \Psi} \dot{\tilde{\pi}} \tilde{\Psi}   -\frac{k^2}{a^2} A^{(2)}_{\dot{\pi} \pi} \dot{\tilde{\pi}} \tilde{\pi}  
+  \nonumber \\&
+  -\frac{\vec{k}.\vec{k}'}{a^2}  A^{1,1}_{\Phi \Psi} \tilde{\Phi} \tilde{\Psi}  -\frac{\vec{k}.\vec{k}'}{a^2}  A^{1,1}_{\Phi \pi} \tilde{\Phi} \tilde{\pi}  -\frac{\vec{k}.\vec{k}'}{a^2}  A^{1,1}_{\Psi \pi} \tilde{\Psi} \tilde{\pi}  -\frac{\vec{k}.\vec{k}'}{a^2}  A^{1,1}_{\pi \pi} \tilde{\pi} \tilde{\pi}   -\frac{\vec{k}.\vec{k}'}{a^2}  A^{1,1}_{\Phi \Phi} \tilde{\Phi} \tilde{\Phi} -\frac{\vec{k}.\vec{k}'}{a^2}  A^{1,1}_{\Psi \Psi} \tilde{\Psi} \tilde{\Psi} \Bigg ]
+  \text{ .}
+\end{align}
+Where;
+\be
+A^{(2)}_{\Phi \Phi}=0 \text{ .}
+\ee
+\be
+A^{(2)}_{\Phi \Psi}=0 \text{ .}
+\ee
+\be
+A^{(2)}_{\Phi \pi}=-m_3^3 \text{ .}
+\ee
+\be
+A^{(2)}_{\Psi \Phi}= 0\text{ .}
+\ee
+\be
+A^{(2)}_{\Psi \Psi}= 4 M_*^2 f \text{ .}
+\ee
+\be
+A^{(2)}_{\Psi \pi}=+2 m_3^3-2 M_*^2 \dot{f} \text{ .}
+\ee
+\be
+A^{(2)}_{\pi \Phi}=0 \text{ .}
+\ee
+\be
+A^{(2)}_{\pi \Psi}= 2 M_*^2 \dot{f} \text{ .}
+\ee
+\be
+A^{(2)}_{\pi \pi}= \dot{m_3^3}-M_*^2 \ddot{f} \text{ .}
+\ee
+\be
+A^{(2)}_{\dot{\Phi} \Phi}=0 \text{ .}
+\ee
+\be
+A^{(2)}_{\dot{\Phi} \Psi}=0 \text{ .}
+\ee
+\be
+A^{(2)}_{\dot{\Phi} \pi}= 0\text{ .}
+\ee
+\be
+A^{(2)}_{\dot{\Psi} \Phi}=0 \text{ .}
+\ee
+\be
+A^{(2)}_{\dot{\Psi} \Psi}=0 \text{ .}
+\ee
+\be
+A^{(2)}_{\dot{\Psi} \pi}= 0\text{ .}
+\ee
+\be
+A^{(2)}_{\dot{\pi} \Phi}= 0\text{ .}
+\ee
+\be
+A^{(2)}_{\dot{\pi} \Psi}=0 \text{ .}
+\ee
+\be
+A^{(2)}_{\dot{\pi} \pi}= m_3^3\text{ .}
+\ee
+\be
+ A^{1,1}_{\Phi \Psi}=0  \text{ .}
+\ee
+\be
+ A^{1,1}_{\Phi \pi}=0  \text{ .}
+\ee
+\be
+ A^{1,1}_{\Psi \pi}= -m_3^3 + M_*^2 \dot{f} \text{ .}
+\ee
+\be
+ A^{1,1}_{\Psi \Psi}= 0 \text{ .}
+\ee
+\be
+ A^{1,1}_{\pi \pi}=  0 \text{ .}
+\ee
+\be
+ A^{1,1}_{\Phi \Phi}= 0  \text{ .}
+\ee
+\subsection{$\Psi$:}
+For simplicity we remove the "tilde" and the wave number of the fields in Fourier space, for example by $\Phi \Psi$ we mean $\tilde{\Phi} (\vec{k}) \tilde{\Psi}( \vec{k'}) $
+%Here we have more complicated expression because we have non zero $\ddot{\Psi} , \ddot{\pi} $ coefficient, but again there are no terms from
+% $\{  -k_i k_j  \Phi ,-k_i k_j  \Psi,-k_i k_j  \pi , -k^2 \dot{\Phi},  -k^2 \dot{\Psi},-k^2 \dot{\pi},  -i k^3  \Phi , -i k^3  \Psi,   -i k^3  \pi ,  k^4  \Phi ,  k^4  \Psi,  k^4  \pi  ,... \}$.  Again for $ \{  i \, \vec{k} \,  \Phi,i \vec{k}  \Psi,i \vec{k} \,    \pi  \}$ we have contribution only when they couple to each other, like $-\vec{k} .\vec{k'} \Phi \Psi$. So we write all possible terms which are chosen from  $ \{ \Phi, \Psi, \pi  \; , \dot{\Phi},\dot{\Psi},\dot{\pi} \; ,-k^2  \Phi,   -k^2  \Psi, -k^2  \pi  \}  $ plus three terms from $ \{  i \, \vec{k} \,  \Phi,i \vec{k}  \Psi,i \vec{k} \,    \pi  \}$ . We write double time derivative contribution $\ddot{\Phi} , \ddot{\Psi},\ddot{\pi} $ differently for simplicity with first order coefficients $B_{\ddot{\Phi}} (\Phi,\Psi,\pi), B_{\ddot{\Psi}} (\Phi,\Psi,\pi) , B_{\ddot{\pi}} (\Phi,\Psi,\pi) $ ;
+\begin{align}
+\frac{1}{\sqrt{-g}} \frac{\delta S}{\delta \Psi} &=  \int \int d^3k d^3 k' e^{i(\vec{k}+\vec{k}') . \vec{x}}  \Bigg [  -\frac{k^2}{a^2} B^{(2)}_{\Phi \Phi}  \tilde{\Phi} (\vec{k})  \tilde{\Phi}(\vec{k'})  -\frac{k^2}{a^2} B^{(2)}_{\Phi \Psi} \Phi \Psi   -\frac{k^2}{a^2} B^{(2)}_{\Phi \pi} \Phi \pi 
+ -\frac{k^2}{a^2} B^{(2)}_{\Psi \Phi} \Psi \Phi  -\frac{k^2}{a^2} B^{(2)}_{\Psi \Psi} \Psi \Psi   -\frac{k^2}{a^2} B^{(2)}_{\Psi \pi} \Psi \pi 
+\nonumber  \\& 
+  -\frac{k^2}{a^2} a^{(2)}_{\pi \Phi} \pi \Phi  -\frac{k^2}{a^2} B^{(2)}_{\pi \Psi} \pi \Psi   -\frac{k^2}{a^2} B^{(2)}_{\pi \pi} \pi \pi 
+  -\frac{k^2}{a^2} B^{(2)}_{\dot{\Phi} \Phi} \dot{\Phi} \Phi  -\frac{k^2}{a^2} B^{(2)}_{\dot{\Phi} \Psi} \dot{\Phi} \Psi   -\frac{k^2}{a^2} B^{(2)}_{\dot{\Phi} \pi} \dot{\Phi} \pi 
+\nonumber   \\&
+-\frac{k^2}{a^2} B^{(2)}_{\dot{\Psi} \Phi} \dot{\Psi} \Phi  -\frac{k^2}{a^2} B^{(2)}_{\dot{\Psi} \Psi} \dot{\Psi} \Psi   -\frac{k^2}{a^2} B^{(2)}_{\dot{\Psi} \pi} \dot{\Psi} \pi 
+    -\frac{k^2}{a^2} B^{(2)}_{\dot{\pi} \Phi} \dot{\pi} \Phi  -\frac{k^2}{a^2} B^{(2)}_{\dot{\pi} \Psi} \dot{\pi} \Psi   -\frac{k^2}{a^2} B^{(2)}_{\dot{\pi} \pi} \dot{\pi} \pi  \nonumber \\&
+  -\frac{\vec{k} .\vec{k'}}{a^2}  B^{1,1}_{\Phi \Psi} \Phi \Psi  -\frac{\vec{k} .\vec{k'}}{a^2}  B^{1,1}_{\Phi \pi} \Phi \pi  -\frac{\vec{k} .\vec{k'}}{a^2}  B^{1,1}_{\Psi \pi} \Psi \pi  - \frac{\vec{k}.\vec{k}'}{a^2}  B^{1,1}_{\pi \pi} \pi  \pi   -  \frac{\vec{k}.\vec{k}'}{a^2}   B^{1,1}_{\Phi \Phi} \Phi \Phi -\frac{\vec{k}.\vec{k}'}{a^2}  B^{1,1}_{\Psi \Psi} \Psi \Psi  \Bigg ]
+   \text{ .}
+\end{align}
+Where;
+\be
+B^{(2)}_{\Phi \Phi}= 0  \text{ .}
+\ee
+\be
+B^{(2)}_{\Phi \Psi}=0  \text{ .}
+\ee
+\be
+B^{(2)}_{\Phi \pi}=0  \text{ .}
+\ee
+\be
+B^{(2)}_{\Psi \Phi}= - 4 M_*^2 f  \text{ .}
+\ee
+\be
+B^{(2)}_{\Psi \Psi}= 4 M_*^2 f    \text{ .}
+\ee
+\be
+B^{(2)}_{\Psi \pi}= - 4 M_*^2 \dot{f} \text{ .}
+\ee
+\be
+B^{(2)}_{\pi \Phi}= -2 M_*^2 \dot{f} \text{ .}
+\ee
+\be
+B^{(2)}_{\pi \Psi}= 2 M_*^2 \dot{f} \text{ .}
+\ee
+\be
+B^{(2)}_{\pi \pi}= -2 M_*^2 \ddot{f}  \text{ .}
+\ee
+\be
+B^{(2)}_{\dot{\Phi} \Phi}= 0 \text{ .}
+\ee
+\be
+B^{(2)}_{\dot{\Phi} \Psi}=0 \text{ .}
+\ee
+\be
+B^{(2)}_{\dot{\Phi} \pi}=0 \text{ .}
+\ee
+\be
+B^{(2)}_{\dot{\Psi} \Phi}= 0 \text{ .}
+\ee
+\be
+B^{(2)}_{\dot{\Psi} \Psi}=0 \text{ .}
+\ee
+\be
+B^{(2)}_{\dot{\Psi} \pi}= 0\text{ .}
+\ee
+\be
+B^{(2)}_{\dot{\pi} \Phi}=0  \text{ .}
+\ee
+\be
+B^{(2)}_{\dot{\pi} \Psi}= 0\text{ .}
+\ee
+\be
+B^{(2)}_{\dot{\pi} \pi}=0 \text{ .}
+\ee
+\be
+B^{1,1}_{\Phi \Psi}=2 M_*^2 f
+\ee
+\be
+B^{1,1}_{\Phi \pi}= -m_3^3 -3 M_*^2 \dot{f}
+\ee
+\be
+B^{1,1}_{\Psi \pi}=2 M_*^2 \dot{f}
+\ee
+\be
+B^{1,1}_{\Psi \Psi}=-M_*^2 f
+\ee
+\be
+B^{1,1}_{\pi \pi}=\frac{1}{2} \left (  3 m_3^3 H -2 c +3 \dot{m_3^3} -4 M_*^2 \ddot{f}  \right)                                                                                                  
+\ee
+\be
+B^{1,1}_{\Phi \Phi}=-2 M_*^2 f
+\ee
+\subsection{$\pi$:}
+%According to the obtained equation, there are no terms from
+% $\{  -k_i k_j  \Phi ,-k_i k_j  \Psi,-k_i k_j  \pi , -k^2 \dot{\Phi},  -k^2 \dot{\Psi},-k^2 \dot{\pi} \\,  -i k^3  \Phi , -i k^3  \Psi,   -i k^3  \pi ,  k^4  \Phi ,  k^4  \Psi,  k^4  \pi  ,... \}$.  Again for $ \{  i \, \vec{k} \,  \Phi,i \vec{k}  \Psi,i \vec{k} \,    \pi  \}$ we have contribution only when they couple to each other, like $-k^2 \Phi \Psi$. So all possible terms  are chosen from  $ \{ \Phi, \Psi, \pi  \; , \dot{\Phi},\dot{\Psi},\dot{\pi} \; ,-k^2  \Phi,   -k^2  \Psi, -k^2  \pi  \}  $ plus three terms from $ \{  i \, \vec{k} \,  \Phi,i \vec{k}  \Psi,i \vec{k} \,    \pi  \}$  and double derivatives contributions . We write double time derivative terms $\ddot{\Phi} , \ddot{\Psi},\ddot{\pi} $ differently for simplicity with first order coefficients $B_{\ddot{\Phi}} (\Phi,\Psi,\pi), B_{\ddot{\Psi}} (\Phi,\Psi,\pi) , B_{\ddot{\pi}} (\Phi,\Psi,\pi) $ ;
+\begin{align}
+\frac{1}{\sqrt{-g}} \frac{\delta S}{\delta \pi} &=  \int \int d^3k d^3 k' e^{i(\vec{k}+\vec{k}') . \vec{x}}  \Bigg [   -\frac{k^2}{a^2} C^{(2)}_{\Phi \Phi} \Phi \Phi  -\frac{k^2}{a^2} C^{(2)}_{\Phi \Psi} \Phi \Psi   -\frac{k^2}{a^2} C^{(2)}_{\Phi \pi} \Phi \pi 
+  -\frac{k^2}{a^2} C^{(2)}_{\Psi \Phi} \Psi \Phi  -\frac{k^2}{a^2} C^{(2)}_{\Psi \Psi} \Psi \Psi   -\frac{k^2}{a^2} C^{(2)}_{\Psi \pi} \Psi \pi 
+\nonumber  \\& 
+   -\frac{k^2}{a^2} C^{(2)}_{\pi \Phi} \pi \Phi  -\frac{k^2}{a^2} C^{(2)}_{\pi \Psi} \pi \Psi   -\frac{k^2}{a^2} C^{(2)}_{\pi \pi} \pi \pi 
+  -\frac{k^2}{a^2} C^{(2)}_{\dot{\Phi} \Phi} \dot{\Phi} \Phi  -\frac{k^2}{a^2} C^{(2)}_{\dot{\Phi} \Psi} \dot{\Phi} \Psi   -\frac{k^2}{a^2} C^{(2)}_{\dot{\Phi} \pi} \dot{\Phi} \pi 
+\nonumber   \\&
+ -\frac{k^2}{a^2} C^{(2)}_{\dot{\Psi} \Phi} \dot{\Psi} \Phi  -\frac{k^2}{a^2} C^{(2)}_{\dot{\Psi} \Psi} \dot{\Psi} \Psi   -\frac{k^2}{a^2} C^{(2)}_{\dot{\Psi} \pi} \dot{\Psi} \pi 
+  +C_{ \dot{\pi}\dot{\pi}}  \dot{\pi}\dot{\pi}  -\frac{k^2}{a^2} C^{(2)}_{\dot{\pi} \Phi} \dot{\pi} \Phi  -\frac{k^2}{a^2} C^{(2)}_{\dot{\pi} \Psi} \dot{\pi} \Psi   -\frac{k^2}{a^2} C^{(2)}_{\dot{\pi} \pi} \dot{\pi} \pi \text{ .}
+    \nonumber \\&
+  -\frac{\vec{k}.\vec{k}'}{a^2}  C^{1,1}_{\Phi \Psi} \Phi \Psi  -\frac{\vec{k}.\vec{k}'}{a^2}  C^{1,1}_{\Phi \pi} \Phi \pi  -\frac{\vec{k}.\vec{k}'}{a^2}  C^{1,1}_{\Psi \pi} \Psi \pi  -\frac{\vec{k}.\vec{k}'}{a^2}  C^{1,1}_{\pi \pi} \pi \pi   -\frac{\vec{k}.\vec{k}'}{a^2}  C^{1,1}_{\Phi \Phi} \Phi \Phi -\frac{\vec{k}.\vec{k}'}{a^2}  C^{1,1}_{\Psi \Psi} \Psi \Psi    
+  \nonumber \\ &
+ + C_{\ddot{\Phi}} (\Phi,\Psi,\pi) \ddot{\Phi} + C_{\ddot{\Psi}} (\Phi,\Psi,\pi) \ddot{\Psi}+ C_{\ddot{\pi}} (\Phi,\Psi,\pi) \ddot{\pi} \Bigg ] 
+  \text{ .}
+\end{align}
+Where;
+\be
+C^{(2)}_{\Phi \Phi}=  - m_3^3 \text{ .}
+\ee
+\be
+C^{(2)}_{\Phi \Psi}= 0 \text{ .}
+\ee
+\be
+C^{(2)}_{\Phi \pi}=  -4 H m_3^3 - 4 M_2^4  \text{ .}
+\ee
+\be
+C^{(2)}_{\Psi \Phi}= 2 (m_3^3 -M_*^2 \dot{f})  \text{ .}
+\ee
+\be
+C^{(2)}_{\Psi \Psi}= 4 M_*^2 \dot{f} \text{ .}
+\ee
+\be
+C^{(2)}_{\Psi \pi}= 2 \left ( m_3^3 H + 2 c +\dot{m_3^3}  \right )   \text{ .}
+\ee
+\be
+C^{(2)}_{\pi \Phi}= \dot{m_3^3} - M_*^2 \ddot{f} \text{ .}
+\ee
+\be
+C^{(2)}_{\pi \Psi}= 2 M_*^2 \ddot{f} \text{ .}
+\ee
+\be
+C^{(2)}_{\pi \pi}=  -3m_3^3 \dot{H} +  H \dot{m_3^3} + 2 \dot{c} +  \ddot{m_3^3}   \text{ .}
+\ee
+\be
+C^{(2)}_{\dot{\Phi} \Phi}= 0\text{ .}
+\ee
+\be
+C^{(2)}_{\dot{\Phi} \Psi}=0 \text{ .}
+\ee
+\be
+C^{(2)}_{\dot{\Phi} \pi}= -m_3^3 \text{ .}
+\ee
+\be
+C^{(2)}_{\dot{\Psi} \Phi}=0 \text{ .}
+\ee
+\be
+C^{(2)}_{\dot{\Psi} \Psi}=0 \text{ .}
+\ee
+\be
+C^{(2)}_{\dot{\Psi} \pi}= -4 m_3^3 \text{ .}
+\ee
+\be
+C^{(2)}_{\dot{\pi} \Phi}= m_3^3   \text{ .}
+\ee
+\be
+C^{(2)}_{\dot{\pi} \Psi}= 0 \text{ .}
+\ee
+\be
+C^{(2)}_{\dot{\pi} \pi}= 4 M_2^4 \text{ .}
+\ee
+\be
+C^{1,1}_{\Phi \Psi}= - (m_3^3 -M_*^2 \dot{f}) \text{ .}
+\ee
+\be
+C^{1,1}_{\Phi \pi}=  2 (-m_3^3 H + c- 2 M_2^4 +\dot{m_3^3 })    \text{ .}
+\ee
+\be
+C^{1,1}_{\Psi \pi}= - \left (  m_3^3 H + 2c + \dot{m_3^3}  \right )      \text{ .}
+\ee
+\be
+C^{1,1}_{\Psi \Psi}=	- M_*^2 \dot{f}	\text{ .}
+\ee
+\be
+C^{1,1}_{\pi \pi}= \frac{1}{2} \left (  3 m_3^3 H^2 + 2 (\dot{c} +2  \dot{M_2^4})+ 4 M_2^4 H - H \dot{m_3^3 }  -4 {m_3^3}  (H^2 +\dot{H}) \right )	\text{ .}
+\ee
+\be
+C^{1,1}_{\Phi \Phi}= - M_*^2 \dot{f}	\text{ .}
+\ee
+\be
+C_{\ddot{\Phi}} (\Phi,\Psi,\pi)=0	\text{ .}
+\ee
+\be
+C_{\ddot{\Psi}} (\Phi,\Psi,\pi)= 0 \text{ .}
+\ee
+\be
+C_{\ddot{\pi}} (\Phi,\Psi,\pi)= 	- m_3^3 \frac{k^2}{a^2} \tilde{\pi} \text{ .}
+\ee
+
+
+\end{document}
+ 
