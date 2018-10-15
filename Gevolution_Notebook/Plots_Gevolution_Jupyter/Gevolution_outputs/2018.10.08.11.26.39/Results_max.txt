@@ -1,0 +1,7 @@
+### The result of the maximum over time 
+### d tau = 0.0426039
+### number of kessence update = 10
+### initial time = 1.44254
+### 1- tau	2- max(H pi_k)	3- max (zeta)	 4- max (phi)   
+  1.44254	        0	        0	0.000225164
+  1.48515	8.62001e-06	2.73788e-08	0.000225164

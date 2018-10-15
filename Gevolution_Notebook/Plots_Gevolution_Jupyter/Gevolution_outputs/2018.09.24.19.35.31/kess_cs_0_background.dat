@@ -1,0 +1,4 @@
+# background statistics
+# cycle   tau/boxsize    a             conformal H/H0  phi(k=0)       T00(k=0)
+      0   6.427024e-01   9.900990e-03   5.696668e+00   0.000000e+00   3.120460e-01
+      1   6.577384e-01   1.030088e-02   5.581878e+00   5.935104e-10   3.120460e-01

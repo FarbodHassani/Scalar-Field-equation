@@ -1,0 +1,57 @@
+### The result of the verage over time 
+### d tau = 3.75901e-11
+### number of kessence update = 1
+### initial time = 0.642703
+### 1- tau      2- average(pi_k)   3- average (zeta)   
+ 0.642703	        0	        0
+ 0.642703	2.80502e-09	  74.6213
+ 0.642703	4.90212e+06	1.3041e+17
+ 0.642703	8.56726e+21	2.27913e+32
+ 0.642703	5.3704e+47	1.42868e+58
+ 0.642703	8.08838e+99	2.15173e+110
+ 0.642703	2.4089e+205	6.40835e+215
+ 0.642703	      inf	      inf
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan
+ 0.642703	      nan	      nan

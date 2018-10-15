@@ -1,0 +1,6 @@
+# List of input/precision parameters passed
+# but not used (just for info)
+#
+tol_ncdm_bg = 1.e-10
+l_max_ncdm = 50
+tol_ncdm = 1.e-10

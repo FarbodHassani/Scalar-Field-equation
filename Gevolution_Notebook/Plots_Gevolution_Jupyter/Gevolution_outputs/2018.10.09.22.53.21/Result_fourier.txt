@@ -1,0 +1,5 @@
+### The result of the verage over time 
+### d tau = 0.238644
+### number of kessence update = 10
+### initial time = 11.9322
+### 1- tau	 2- pi_k(k)		3-zeta(k)		4-|k|		 5-vec{k} 	 6-|k|^2

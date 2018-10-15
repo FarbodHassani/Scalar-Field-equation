@@ -1,0 +1,36 @@
+### The result of the verage over time 
+### d tau = 0.015036
+### number of kessence update = 10
+### initial time = 0.642703
+### 1- tau	2- average(H pi_k)	3- average (zeta)	 4- average (phi)   
+ 0.642703	5.21085e-21	        0	-3.11285e-20
+ 0.657739	      nan	      nan	-3.11285e-20
+ 0.673084	      nan	      nan	5.93511e-10
+ 0.688745	      nan	      nan	1.10011e-09
+ 0.704726	      nan	      nan	1.56786e-09
+ 0.721036	      nan	      nan	2.00256e-09
+  0.73768	      nan	      nan	2.40793e-09
+ 0.754664	      nan	      nan	2.78723e-09
+ 0.771996	      nan	      nan	3.14343e-09
+ 0.789681	      nan	      nan	3.47917e-09
+ 0.807728	      nan	      nan	3.79688e-09
+ 0.826143	      nan	      nan	4.09877e-09
+ 0.844933	      nan	      nan	4.38685e-09
+ 0.864106	      nan	      nan	4.66296e-09
+ 0.883669	      nan	      nan	4.92877e-09
+ 0.903631	      nan	      nan	5.18582e-09
+ 0.923998	      nan	      nan	5.43552e-09
+ 0.944778	      nan	      nan	5.67918e-09
+ 0.965981	      nan	      nan	5.91798e-09
+ 0.987614	      nan	      nan	6.15303e-09
+  1.00969	      nan	      nan	6.38536e-09
+   1.0322	      nan	      nan	6.61592e-09
+  1.05518	      nan	      nan	6.84558e-09
+  1.07862	      nan	      nan	7.07518e-09
+  1.10253	      nan	      nan	7.3055e-09
+  1.12693	      nan	      nan	7.53726e-09
+  1.15182	      nan	      nan	7.77115e-09
+  1.17722	      nan	      nan	8.00783e-09
+  1.20313	      nan	      nan	8.24793e-09
+  1.22956	      nan	      nan	8.49204e-09
+  1.25652	      nan	      nan	8.74073e-09
